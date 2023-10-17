@@ -1,0 +1,27 @@
+const http = require("http");
+const express = require("express");
+const app = express();
+const path = require("path");
+const hbs = require("hbs");
+
+const port = 1232;
+const hostname = "0.0.0.0";
+
+const server = http.createServer(app);
+server.listen(port, hostname, (req, res)=> {
+  console.log(`http://${hostname}:${port}`);
+});
+
+const staticPath = path.join(__dirname, "../tamplates/public");
+app.use(express.static(staticPath));
+
+const viewPath = path.join(__dirname, "../tamplates/views");
+app.set("view engine", "hbs");
+app.set("views", viewPath);
+
+const partialsPath = path.join(__dirname, "../tamplates/partials");
+hbs.registerPartials(partialsPath);
+
+app.get("/", (req, res)=> {
+  res.render("index.hbs");
+});
