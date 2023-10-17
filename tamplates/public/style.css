@@ -3,7 +3,7 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 .hero {
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100vw;
   height: 500px;
 }
