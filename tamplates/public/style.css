@@ -48,7 +48,7 @@ body {
   background-color: #F8DD68;
   width: 100vw;
   height: 500px;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-bottom: 3rem;
 }
 .services .service-des {
