@@ -46,7 +46,7 @@ body {
 .services {
   align-items: start;
   background-color: #F8DD68;
-  width: 100vw;
+/*  width: 100vw;*/
   height: 500px;
   justify-content: space-around;
   padding-bottom: 3rem;
